@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property string $token Токен
  * @property Carbon $created_at Время создания
  * @property Carbon $updated_at Время последнего редактирования
+ * @property Carbon $last_use Время последнего использования
  * @property User $user Модель пользователя по токену
  *
  * Class Token
@@ -29,7 +30,7 @@ class Token extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'token',
+        'user_id', 'token', 'last_use'
     ];
 
     /**

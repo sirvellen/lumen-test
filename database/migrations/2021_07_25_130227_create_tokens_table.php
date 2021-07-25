@@ -17,6 +17,7 @@ class CreateTokensTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('token')->unique();
+            $table->timestamp('last_use')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->on('users')->references('id')->cascadeOnDelete()->cascadeOnUpdate();

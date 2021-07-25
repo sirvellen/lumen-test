@@ -19,7 +19,7 @@ $router->group(['prefix' => 'api'], function () use ($router) {
 
     $router->group(['middleware' => 'auth'], function () use ($router) {
         $router->post('logout',   ['as' => 'logout',   'uses' => 'Api\UserController@logout']);
-        $router->post('refresh',  ['as' => 'refresh',  'uses' => 'Api\UserController@refresh']);
+        $router->post('refresh',  ['as' => 'refresh',  'uses' => 'Api\UserController@refreshToken']);
         $router->get('profile', 'Api\UserController@show');
     });
 });
