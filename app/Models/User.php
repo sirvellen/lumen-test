@@ -12,8 +12,10 @@ use Laravel\Lumen\Auth\Authorizable;
 /**
  * Модель пользователя
  *
+ * @property int $id Идентификатор
  * @property string $name Имя пользователя
  * @property string $email Почтовый адрес пользователя
+ * @property string $password Пароль
  * @property Carbon $created_at Время создания
  * @property Carbon $updated_at Время последнего редактирования
  *
